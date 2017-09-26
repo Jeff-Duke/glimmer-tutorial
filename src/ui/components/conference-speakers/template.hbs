@@ -1,0 +1,18 @@
+<div>
+  <h1>This is the conference speakers component</h1>
+
+  <conference-speaker @name={{user.name}} @status='Speaking'/>
+
+  <ul>
+    {{#each speakers key="@index" as |speaker index|}}
+      <li>{{speaker}}</li>
+    {{/each}}
+  </ul>
+
+  {{#if moreSpeakers}}
+    <button onclick={{action next}}>Next</button>
+  {{else}}
+    <p>All finished!</p>
+  {{/if}}
+
+</div>
